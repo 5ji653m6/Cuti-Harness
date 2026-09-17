@@ -1,0 +1,20 @@
+{
+  "excluded": [
+    ".agents/notes/AGENTS.md",
+    ".agents/notes/implemented/AGENTS.md",
+    ".agents/notes/implemented/CLAUDE.md",
+    "apps/video-studio/src/components/video/README.md",
+    "apps/video-studio/src/features/studio/project-workspace/README.md",
+    "docs/AGENTS.md",
+    "docs/cordis-api/inherited.md",
+    "docs/i18n/style-samples.md",
+    "docs/i18n/terminology.md",
+    "docs/i18n/translation-prompt.md",
+    "services/video-runtime/app/agent_config/README.md",
+    "services/video-runtime/app/chat/skills/README.md",
+    "services/video-runtime/docs/README.md",
+    "services/video-runtime/kit/README.md",
+    "services/video-runtime/kit/skills/README.md",
+    "services/video-runtime/tests/README.md"
+  ]
+}

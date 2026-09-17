@@ -1,0 +1,6 @@
+{
+  "installed_at": "2026-08-13T11:30:00+00:00",
+  "name": "h3",
+  "source": "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/h3-prompt-writing",
+  "notes": "Instruction-only. Cuti name is h3. WaveSpeed generate stays on the host workflow."
+}

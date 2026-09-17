@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cuti 情景短剧产品广告"
+  short_description: "通过人物冲突、产品介入和剧情结果自然证明产品核心卖点"
+  default_prompt: "使用 $cuti-scenario-product-workflow 根据产品图片和简报制作一支情景短剧型产品广告。"

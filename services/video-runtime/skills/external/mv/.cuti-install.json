@@ -1,0 +1,6 @@
+{
+  "installed_at": "2026-08-12T05:00:00+00:00",
+  "name": "mv",
+  "source": "local_authored",
+  "notes": "MV workflow (music spine). Picture generate defaults to MiniMax H3; Seedance 2.0 is a model option."
+}

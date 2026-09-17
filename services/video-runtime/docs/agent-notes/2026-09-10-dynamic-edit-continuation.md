@@ -1,0 +1,9 @@
+# Dynamic editing uses the continuous task loop
+
+The active original Cuti task runtime invokes its coordinator on a changed user goal and after task output. Its task graph and artifacts remain available for subsequent PlanPatches. The migrated regeneration and post-production preview paths instead submitted fixed incremental plans whose exception branch terminated the Build without creating an Agent checkpoint.
+
+With staged and continuous planning enabled, the three edit-preview entry points register the exact requested edits as a ProjectIntent and reuse selected media through the existing continuous planning path. No new Agent loop or workflow-specific compiler is introduced. Missing monolithic VideoSpec or workflow metadata does not prevent editing an imported artifact. The Agent chooses executable tasks and explicit media inputs; the replaced output is not implicitly attached as a reference video.
+
+Continuous task execution reports terminal failures before resubmitting generation. The same Session receives the error, can submit corrected replacement tasks and rewire pending descendants, and publishes a new version only on completion. Existing ownership, optimistic version checks, grants, cancellation, durable remote-operation reconciliation and idempotency remain in force. Provider credit failures require user action and are not evidence of a transient timeout.
+
+Regression coverage exercises regeneration from an imported video without a VideoSpec, error feedback, changed-parameter replacement, preservation of an unrelated video, edit completion, idempotent previews, rejection of premature completion, and post-production/dependency preview routing. Existing continuous-scheduler tests cover live append/cancel and recovery. Real paid generation remains subject to provider credentials and balance.

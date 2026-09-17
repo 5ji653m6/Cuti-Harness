@@ -1,0 +1,94 @@
+{
+  "music": {
+    "generated": "Background music is ready — preview it and continue, or trim it to a tighter segment before moving on to storyboarding",
+    "trim_applied": "Your trim has been applied: about {duration}s of music kept. Storyboarding and shots will use this new version"
+  },
+  "video": {
+    "completed": "Video assembly completed",
+    "missing_segments_prompt": "Some segments are missing or failed (black placeholder used). Please regenerate and try again"
+  },
+  "outline": {
+    "generated": "Story outline generated successfully"
+  },
+  "video_segments": {
+    "processing_start": "Starting lyrics sync...",
+    "processing_completed": "Lyrics sync completed, {count} segments ready",
+    "processing_failed": "Lyrics sync failed: {error}",
+    "segment_created": "Lyrics sync segment {number} created successfully",
+    "segment_failed": "Lyrics sync segment {number} creation failed: {error}"
+  },
+  "lipsync": {
+    "processing_start": "Starting lipsync processing for {count} video segments",
+    "processing_completed": "Lipsync processing completed, successfully processed {count} segments",
+    "processing_failed": "Lipsync processing failed: {error}",
+    "segment_start": "Processing video segment lipsync: {uuid}",
+    "segment_completed": "Video segment lipsync completed: {uuid}",
+    "segment_failed": "Video segment lipsync failed {uuid}: {error}",
+    "video_check_start": "Checking if video is suitable for lipsync: {url}",
+    "video_suitable": "Video is suitable for lipsync, continuing: {uuid}",
+    "video_unsuitable": "Video is not suitable for lipsync, skipping: {uuid}",
+    "video_check_failed": "Video understanding check failed, continuing with lipsync: {uuid}",
+    "no_audio_url": "No audio URL found, skipping lipsync: {uuid}"
+  },
+  "character": {
+    "generation_failed": "Character image generation failed",
+    "multi_view_generation_failed": "Multi-view image generation failed"
+  },
+  "common": {
+    "success": "Success",
+    "failed": "Failed",
+    "error": "Error",
+    "generating": "Generating",
+    "completed": "Completed"
+  },
+  "image_model_switched": {
+    "fallback_default": "The requested model was temporarily unavailable; another model was used to complete generation.",
+    "best_effort_consistency": "Character consistency may vary; the closest result was used.",
+    "all_unavailable": "All image generation models are temporarily unavailable. Please try again later."
+  },
+  "generation_failed": {
+    "reason": {
+      "rate_limited": "There is high demand right now. Please try again shortly.",
+      "content_moderation": "The content did not pass the safety review. Please adjust the description and try again.",
+      "quota_exceeded": "Generation quota is temporarily exhausted. Please try again later.",
+      "service_unavailable": "The generation service is temporarily busy. Please try again later.",
+      "invalid_input": "This content is not supported right now. Please adjust the description and try again.",
+      "unknown": "Generation failed. Please try again later."
+    },
+    "stage_blocked": {
+      "music": "Music generation failed. Later shots depend on the music rhythm, so this run has been stopped. We recommend starting a new conversation to generate again.",
+      "outline": "Script/outline generation failed. Everything downstream depends on it, so this run has been stopped. We recommend starting a new conversation to generate again.",
+      "character": "Character generation failed. Keyframes and videos depend on the character, so this run has been stopped. We recommend starting a new conversation to generate again.",
+      "character_fusion": "Character fusion failed. This run has been stopped. We recommend starting a new conversation to generate again.",
+      "scene": "Storyboard scene generation failed. This run has been stopped. We recommend starting a new conversation to generate again.",
+      "narration": "Narration generation failed. This run has been stopped. We recommend starting a new conversation to generate again.",
+      "keyframe": "{failed}/{total} keyframes failed to generate. Videos depend on keyframes, so generation has been paused. Please retry the failed keyframes before continuing.",
+      "video": "{failed}/{total} shot videos failed to generate. Generation has been paused. Please retry the failed shots before continuing."
+    },
+    "item_failed": "Item {index}: {reason}",
+    "summary": "{stage}: {failed}/{total} failed."
+  },
+  "video_model_switched": {
+    "fallback_suffix": " (A fallback model was used.)",
+    "all_unavailable": "All video generation models are temporarily unavailable. Please try again later."
+  },
+  "capability_warnings": {
+    "sora": "Sora supports 480p, 720p (API outputs 720p; 480p is downscaled), 16:9 and 9:16.",
+    "kling": "Kling v3 supports 480p and 720p.",
+    "nano_banana": "Nano Banana supports 480p and 720p.",
+    "seedance_2_fast_i2v": "Seedance 2.0 Fast supports 480p and 720p (1080p is not available)."
+  },
+  "completion": {
+    "video_analysis": "Video analysis",
+    "story_outline_generated": "Story outline generation",
+    "characters_designed": "Character design",
+    "scenes_generated": "Scene generation",
+    "storyboard_detail_generated": "Storyboard detail generation",
+    "keyframes_generated": "Keyframe generation",
+    "video_segments_generated": "Video generation",
+    "narrations_generated": "Narration generation",
+    "music_generated": "Music generation",
+    "video_completed": "Video assembly"
+  }
+}
+

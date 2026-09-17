@@ -1,0 +1,48 @@
+id: cuti.media-core
+version: 1.0.0
+api_version: v1
+runtime_entrypoint: app.video_runtime.builtin_plugins.media_core:MediaCorePlugin
+trusted: true
+contributions:
+  capabilities:
+    - runtime.artifact.persist
+    - media.tts
+    - media.extract_frame
+    - media.audio_analyze
+    - media.video_analyze
+    - media.audio_cut
+    - media.probe
+    - media.transcribe
+    - media.timeline.compose
+    - media.concat
+    - media.mix_audio
+    - subtitle.compose
+    - media.subtitle_burn
+    - media.hyperframes_caption
+    - media.hyperframes_render
+    - media.lipsync
+  media_operators:
+    - cuti.media-core
+  plan_patch_capabilities:
+    - runtime.artifact.persist
+    - media.transcribe
+    - subtitle.compose
+    - media.subtitle_burn
+    - media.hyperframes_caption
+    - media.hyperframes_render
+    - media.extract_frame
+    - media.concat
+    - media.mix_audio
+    - media.lipsync
+    - media.audio_analyze
+    - media.video_analyze
+    - media.audio_cut
+    - media.probe
+    - media.tts
+permissions:
+  network_domains:
+    - api.wavespeed.ai
+  credentials:
+    - WAVESPEED_API_KEY
+  sandbox: false
+  max_cost_usd: 50

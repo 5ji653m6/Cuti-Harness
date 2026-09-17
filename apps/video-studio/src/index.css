@@ -1,0 +1,1075 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apple-style Modern Transparent Gray Design System */
+
+@layer base {
+  :root {
+    /* Apple-inspired base colors - light theme */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 13%;
+    
+    /* Glass surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    
+    /* Changed primary from blue to black */
+    --primary: 0 0% 13%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Light gray surfaces */
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 0 0% 13%;
+    
+    /* Apple gray accents */
+    --accent-gray: 220 14% 96%;
+    --accent-gray-dark: 220 9% 46%;
+    --accent-blue: 0 0% 13%;
+    --accent-green: 142 76% 36%;
+    --accent-orange: 28 100% 52%;
+    --accent-red: 0 100% 67%;
+    
+    /* Muted colors */
+    --muted: 210 20% 94%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 210 20% 94%;
+    --accent-foreground: 0 0% 13%;
+    
+    --destructive: 0 100% 67%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Apple-style borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 0% 13%;
+    
+    --radius: 0.75rem;
+    
+    /* Apple-style glass effects */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --backdrop-blur: blur(20px);
+    
+    /* Apple gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 13%), hsl(0 0% 25%));
+    --gradient-surface: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(248,250,252,0.9));
+    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+    
+    /* Apple shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    
+    /* Smooth Apple-like animations */
+    --transition-all: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    --transition-transform: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    --chat-bubble-ai: oklch(0.985 0 0);
+    --chat-bubble-user: oklch(0.22 0.015 270);
+    --chat-bubble-user-foreground: oklch(0.98 0 0);
+    --chat-chip: oklch(0.97 0.005 270);
+    --chat-chip-border: oklch(0.9 0.01 270);
+    --chat-brand-from: oklch(0.62 0.25 295);
+    --chat-brand-to: oklch(0.7 0.22 340);
+    --chat-gradient-brand: linear-gradient(135deg, var(--chat-brand-from), var(--chat-brand-to));
+    --chat-shadow-bubble: 0 1px 2px oklch(0 0 0 / 0.04), 0 4px 12px oklch(0 0 0 / 0.04);
+    /* 视觉元素卡片（对齐 paint-show-magic VisualElementsGrid） */
+    --selection-ring: 217 91% 56%;
+    --selection-glow: 217 91% 56%;
+    --artifact-shadow-card: 0 8px 24px -8px rgba(0, 0, 0, 0.12);
+    --artifact-shadow-card-hover: 0 22px 56px -14px rgba(59, 130, 246, 0.32);
+  }
+  
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 13%;
+    --secondary: 220 14% 11%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 14% 11%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 220 14% 11%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 100% 67%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 0 0% 13%;
+
+    --glass-bg: rgba(15, 15, 15, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 85%));
+    --gradient-surface: linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9));
+    --gradient-glass: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(15,15,15,0.4));
+    --chat-bubble-ai: oklch(0.208 0.015 270);
+    --chat-bubble-user: oklch(0.62 0.25 295);
+    --chat-bubble-user-foreground: oklch(0.98 0 0);
+    --chat-chip: oklch(0.23 0.015 270);
+    --chat-chip-border: oklch(0.35 0.02 270);
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    --artifact-shadow-card: 0 8px 24px -8px rgba(0, 0, 0, 0.45);
+    --artifact-shadow-card-hover: 0 22px 56px -14px rgba(96, 165, 250, 0.38);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Mobile safe-area padding for notched devices */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Prevent iOS Safari overscroll bounce */
+  html {
+    overscroll-behavior: none;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body:not(.dark) {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.98) 0%, rgba(245, 246, 248, 0.96) 50%, rgba(243, 244, 247, 0.98) 100%);
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(15, 15, 17, 0.96) 50%, rgba(12, 12, 14, 0.98) 100%);
+    background-attachment: fixed;
+  }
+  
+  /* Apple-style scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@layer components {
+  /* Apple Glass Morphism */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: none;
+  }
+
+  /* Glass background for sub-modules - matches glass background */
+  .glass-bg {
+    background: var(--glass-bg);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .dark .glass-strong {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Apple-style hover effects */
+  .hover-lift {
+    transition: var(--transition-transform);
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+  /* Gradient text with Apple colors */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(0 0% 13%), hsl(0 0% 25%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dark .gradient-text {
+    background: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 85%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Apple button styles */
+  .apple-button {
+    background: var(--gradient-primary);
+    border: none;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-all);
+  }
+  
+  .apple-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+  }
+  
+  /* Floating animations */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  /* Subtle pulse animation */
+  .pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  /* Fade in animation for title rotation */
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 卡片一：柔和呼吸光晕 + 微光扫过 shimmer（放在 layer 外，避免被覆盖） */
+.animate-flash-purple-border {
+  position: relative;
+  animation: card1-breath-glow 5s ease-in-out infinite;
+}
+.animate-flash-purple-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 38%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 62%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: card1-shimmer 3.5s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes card1-breath-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 2px rgba(244, 114, 182, 0.35), 0 0 16px rgba(192, 132, 252, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(192, 132, 252, 0.5), 0 0 24px rgba(244, 114, 182, 0.35);
+  }
+}
+@keyframes card1-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Pill fill animation - expands from center to top and bottom */
+@keyframes pillFillSmooth {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  15% {
+    transform: scaleY(0.15);
+    opacity: 0.4;
+  }
+  30% {
+    transform: scaleY(0.35);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scaleY(0.6);
+    opacity: 0.8;
+  }
+  65% {
+    transform: scaleY(0.82);
+    opacity: 0.9;
+  }
+  78% {
+    transform: scaleY(0.96);
+    opacity: 0.97;
+  }
+  88% {
+    transform: scaleY(1.03);
+    opacity: 1;
+  }
+  94% {
+    transform: scaleY(0.99);
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Glow fade in animation */
+@keyframes glowFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  60% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Celebration animations */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes confettiSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes sparkleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+  }
+}
+
+@keyframes celebrationTextIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* Amber-themed grid scrollbar (used by video-check pages) */
+.scrollbar-thin {
+  scrollbar-width: auto;
+}
+
+.scrollbar-thumb-amber-500\/50 {
+  scrollbar-color: rgba(245, 158, 11, 0.6) rgba(120, 53, 15, 0.4);
+}
+
+.scrollbar-thumb-amber-500\/50::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scrollbar-thumb-amber-500\/50::-webkit-scrollbar-track {
+  background: rgba(120, 53, 15, 0.4);
+  border-radius: 6px;
+  margin: 4px 0;
+}
+
+.scrollbar-thumb-amber-500\/50::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.7), rgba(217, 119, 6, 0.6));
+  border-radius: 6px;
+  border: 2px solid rgba(120, 53, 15, 0.4);
+  box-shadow: inset 0 0 4px rgba(251, 191, 36, 0.3);
+}
+
+.scrollbar-thumb-amber-500\/50:hover::-webkit-scrollbar-thumb,
+.hover\:scrollbar-thumb-amber-500\/70:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.9), rgba(245, 158, 11, 0.8));
+  box-shadow: inset 0 0 6px rgba(251, 191, 36, 0.5), 0 0 8px rgba(251, 191, 36, 0.3);
+}
+
+/* 弱化的横向滚动条样式 - 用于 Video Creation Space，默认隐藏，hover时显示 */
+.scrollbar-subtle {
+  scrollbar-width: none; /* Firefox - 默认隐藏 */
+  -ms-overflow-style: none; /* IE and Edge - 默认隐藏 */
+}
+
+.scrollbar-subtle::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera - 默认隐藏 */
+  width: 4px;
+  height: 4px;
+}
+
+.scrollbar-subtle:hover {
+  scrollbar-width: thin; /* Firefox - hover时显示 */
+  -ms-overflow-style: auto; /* IE and Edge - hover时显示 */
+}
+
+.scrollbar-subtle:hover::-webkit-scrollbar {
+  display: block; /* Chrome, Safari, Opera - hover时显示 */
+}
+
+.scrollbar-subtle::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.scrollbar-subtle:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dark .scrollbar-subtle::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .scrollbar-subtle:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .scrollbar-subtle::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 对话框边缘流动炫光 - 粉紫色，多色阶过渡更丝滑 */
+@keyframes flowGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.input-flow-glow {
+  background: linear-gradient(
+    90deg,
+    #ec4899 0%,
+    #e879a8 12%,
+    #d946ef 25%,
+    #a855f7 40%,
+    #c084fc 55%,
+    #a855f7 70%,
+    #d946ef 85%,
+    #ec4899 100%
+  );
+  background-size: 200% 100%;
+  animation: flowGlow 6s linear infinite;
+}
+
+/* 边缘流光 + 鼠标跟随探照灯 + 呼吸阴影 */
+@keyframes conicSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.input-edge-effects {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 边缘流光：conic-gradient 高亮光条，色阶过渡更丝滑 */
+.input-edge-effects::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(236, 72, 153, 0.2) 25deg,
+    rgba(236, 72, 153, 0.85) 55deg,
+    rgba(168, 85, 247, 0.4) 85deg,
+    rgba(168, 85, 247, 0.95) 115deg,
+    rgba(168, 85, 247, 0.4) 145deg,
+    transparent 175deg,
+    rgba(192, 132, 252, 0.2) 205deg,
+    rgba(192, 132, 252, 0.85) 235deg,
+    rgba(236, 72, 153, 0.4) 265deg,
+    rgba(236, 72, 153, 0.85) 295deg,
+    rgba(236, 72, 153, 0.2) 325deg,
+    transparent 360deg
+  );
+  animation: conicSpin 8s linear infinite;
+  will-change: transform;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 鼠标跟随探照灯：background 由 JS 在 onMouseMove 时内联设置，确保 Chrome 等浏览器每帧重绘 */
+.input-spotlight-layer {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.input-edge-effects-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== Mobile-specific styles ========== */
+
+/* Hide scrollbar on mobile for cleaner look */
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    scrollbar-width: none;
+  }
+
+  /* Enable smooth momentum scrolling on mobile for Radix ScrollArea */
+  [data-radix-scroll-area-viewport] {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Disable hover-lift on touch devices */
+  .hover-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Increase touch target size for interactive elements */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent iOS input zoom (font-size < 16px triggers zoom) */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Bottom nav safe area helper */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ---------------------------------------------------------------------------
+   Home landing (Cuti hero)
+
+   Every size below is expressed in `--u`, one pixel of the 1024x576 design
+   reference, so the whole hero keeps the reference proportions at any viewport
+   width instead of drifting when the window changes.
+   --------------------------------------------------------------------------- */
+.home-landing {
+  --u: clamp(0.6px, calc(100vw / 1024), 1.42px);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "PingFang SC", "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.home-landing .home-landing-hit {
+  min-height: 0;
+  min-width: 0;
+}
+
+/* ---------- background plate ---------- */
+.home-planet-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  /* the plate is inpainted from the reference frame, so it needs no grading:
+     outside the interface areas it is pixel-identical, grain included */
+}
+
+/* Narrow viewports crop the 16:9 plate by height, which would bring the
+   inpainted header band into view. Zoom past it. */
+@media (max-width: 820px) {
+  .home-planet-photo {
+    transform: scale(1.2) translateY(-4%);
+  }
+}
+
+/* ---------- header ---------- */
+.home-header {
+  padding: calc(11 * var(--u)) calc(52 * var(--u)) 0;
+}
+
+.home-logo {
+  font-size: max(16px, calc(20.6 * var(--u)));
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: calc(34 * var(--u));
+  color: #fff;
+}
+
+.home-nav {
+  padding: calc(2 * var(--u)) calc(3 * var(--u));
+  border-radius: 999px;
+  border: 1px solid rgba(232, 238, 248, 0.17);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.home-nav-item {
+  height: max(28px, calc(29 * var(--u)));
+  padding: 0 max(10px, calc(16 * var(--u)));
+  border: 1px solid transparent;
+  border-radius: 999px;
+  /* ~14–15px on desktop (Tesla/Wellfound nav). Floor 13px so narrow windows
+     cannot collapse to 6px. Clarity comes from weight 500, not a bigger size. */
+  font-size: max(13px, calc(11 * var(--u)));
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.2s ease, background 0.2s ease;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: auto;
+}
+
+.home-nav-item:hover {
+  color: #fff;
+}
+
+/* recessed pill with a specular rim, brightest along the top */
+.home-nav-item-active {
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.085);
+}
+
+.home-nav-item-active::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(246, 249, 255, 0.82) 0%,
+    rgba(246, 249, 255, 0.33) 45%,
+    rgba(246, 249, 255, 0.8) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.home-lang {
+  font-size: max(12px, calc(12 * var(--u)));
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: calc(34 * var(--u));
+  color: rgba(255, 255, 255, 0.42);
+  transition: color 0.2s ease;
+}
+
+.home-lang:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- hero type ---------- */
+.home-hero {
+  /* reference block sits 5% below the optical centre of the frame */
+  margin-top: calc(51 * var(--u));
+}
+
+.home-headline {
+  font-size: calc(47 * var(--u));
+  font-weight: 500;
+  line-height: 1.04;
+  /* tuned so the reference string measures 506 reference px wide */
+  letter-spacing: -0.001em;
+  color: #fff;
+}
+
+.home-subhead {
+  margin-top: calc(5 * var(--u));
+  font-size: calc(17.4 * var(--u));
+  font-weight: 400;
+  line-height: calc(24 * var(--u));
+  letter-spacing: 0.012em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ---------- composer ---------- */
+.home-composer-slot {
+  margin-top: calc(29 * var(--u));
+  width: 100%;
+}
+
+/* Glass bar. Measured against the reference: the interior lifts the plate by
+   ~0.19 alpha in the middle and ~0.11 at the ends, and a bright hairline wraps
+   the pill. The stroke is drawn as a real 1px ring (mask-composite) so it never
+   tints the interior. */
+.home-composer {
+  isolation: isolate;
+  width: min(calc(746 * var(--u)), calc(100vw - 32px));
+  margin-inline: auto;
+  border-radius: 999px;
+  border: 0;
+  background:
+    radial-gradient(ellipse 20% 84% at 35% 44%, rgba(255, 255, 255, 0.05), transparent 72%),
+    radial-gradient(ellipse 18% 80% at 66% 50%, rgba(255, 255, 255, 0.042), transparent 72%),
+    radial-gradient(
+      ellipse 42% 118% at 50% 46%,
+      rgba(255, 255, 255, 0.125) 0%,
+      rgba(255, 255, 255, 0.08) 46%,
+      rgba(255, 255, 255, 0.025) 100%
+    );
+}
+
+/* Top and bottom highlight lines. Measured on the reference: the edge peaks near
+   the middle of the bar (alpha ~0.95 top, ~0.87 bottom) and fades to roughly the
+   ring's own level at the caps, which is what stops it reading as a drawn
+   outline. Also a soft bloom just inside each edge. */
+.home-composer::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 253, 250, 0.55) 14%,
+      rgba(255, 253, 250, 1) 50%,
+      rgba(255, 253, 250, 0.55) 86%,
+      transparent 100%
+    ) 0 0 / 100% 1px no-repeat,
+    linear-gradient(
+      90deg,
+      transparent 22%,
+      rgba(255, 253, 250, 0.88) 50%,
+      transparent 78%
+    ) 0 1px / 100% 1px no-repeat,
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 253, 250, 0.32) 16%,
+      rgba(255, 253, 250, 0.9) 50%,
+      rgba(255, 253, 250, 0.32) 84%,
+      transparent 100%
+    ) 0 100% / 100% 1px no-repeat,
+    linear-gradient(
+      90deg,
+      transparent 26%,
+      rgba(255, 253, 250, 0.5) 50%,
+      transparent 74%
+    ) 0 calc(100% - 1px) / 100% 1px no-repeat,
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 12px, transparent 28px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 10px, transparent 22px);
+}
+
+/* the constant part of the rim: a 1px ring at the level the reference keeps all
+   the way round, caps included */
+.home-composer::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  background: rgba(255, 253, 250, 0.5);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.home-composer-expanded {
+  border-radius: 28px;
+}
+
+.home-composer-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  min-height: calc(67 * var(--u));
+  height: auto;
+  padding-inline: calc(15 * var(--u));
+  gap: calc(13 * var(--u));
+}
+
+.home-composer-expanded .home-composer-row {
+  align-items: flex-start;
+  padding-block: calc(11 * var(--u));
+}
+
+/* soft lit disc rather than a hard outlined circle */
+.home-composer-disc {
+  flex: none;
+  width: calc(45 * var(--u));
+  height: calc(45 * var(--u));
+  border-radius: 999px;
+  border: 0;
+  background: radial-gradient(
+    circle at 50% 44%,
+    rgba(255, 255, 255, 0.11) 0%,
+    rgba(255, 255, 255, 0.06) 52%,
+    rgba(255, 255, 255, 0.016) 78%,
+    transparent 100%
+  );
+  color: rgba(255, 255, 255, 0.92);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.home-composer-disc:hover {
+  background: radial-gradient(
+    circle at 50% 44%,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.09) 52%,
+    rgba(255, 255, 255, 0.02) 78%,
+    transparent 100%
+  );
+  color: #fff;
+}
+
+.home-composer-divider {
+  flex: none;
+  width: 1px;
+  height: calc(16 * var(--u));
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.home-composer-skill {
+  flex: none;
+  display: inline-flex;
+  align-items: baseline;
+  max-width: calc(140 * var(--u));
+  margin-right: calc(6 * var(--u));
+  gap: 0.28em;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: calc(13.7 * var(--u));
+  font-weight: 500;
+  line-height: calc(26 * var(--u));
+  letter-spacing: 0.006em;
+}
+
+.home-composer-expanded .home-composer-skill {
+  margin-top: 2px;
+}
+
+.home-composer-skill-mark {
+  color: #a98ad4;
+}
+
+.home-composer-skill-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #a69cb8;
+}
+
+.home-composer-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-height: calc(208 * var(--u));
+  margin-left: calc(6 * var(--u));
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: calc(13.7 * var(--u));
+  font-weight: 400;
+  line-height: calc(26 * var(--u));
+  letter-spacing: 0.006em;
+  color: rgba(255, 255, 255, 0.9);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.28) transparent;
+}
+
+.home-composer-input::-webkit-scrollbar {
+  width: 6px;
+}
+
+.home-composer-input::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+}
+
+.home-composer-input::placeholder {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.home-composer-input:focus {
+  outline: none;
+}
+
+.home-composer-send {
+  flex: none;
+  width: calc(45 * var(--u));
+  height: calc(45 * var(--u));
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 calc(8 * var(--u)) rgba(255, 255, 255, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.home-composer-send:hover:not(:disabled) {
+  transform: scale(1.03);
+}
+
+/* ---------- skill pills ---------- */
+.home-pills {
+  margin-top: calc(25 * var(--u));
+  gap: calc(20 * var(--u));
+}
+
+.home-skill-pill {
+  min-height: 0;
+  min-width: 0;
+  height: calc(33 * var(--u));
+  padding: 0 calc(18 * var(--u));
+  border-radius: 999px;
+  border: 1px solid rgba(232, 238, 248, 0.62);
+  background: rgba(12, 12, 18, 0.26);
+  font-size: calc(10.3 * var(--u));
+  font-weight: 400;
+  letter-spacing: 0.008em;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.home-skill-pill:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.46);
+}
+
+/* selected: faint violet glass, a pale lavender hairline and a soft outward bloom */
+.home-skill-pill-active {
+  color: #fff;
+  border-color: rgb(255, 237, 249);
+  background: linear-gradient(
+    100deg,
+    rgba(44, 26, 68, 0.46) 0%,
+    rgba(34, 22, 56, 0.4) 55%,
+    rgba(26, 18, 44, 0.36) 100%
+  );
+  box-shadow:
+    0 0 calc(2 * var(--u)) rgba(255, 238, 250, 0.9),
+    0 0 calc(6 * var(--u)) rgba(232, 186, 252, 0.5),
+    0 0 calc(13 * var(--u)) rgba(176, 126, 255, 0.28);
+}

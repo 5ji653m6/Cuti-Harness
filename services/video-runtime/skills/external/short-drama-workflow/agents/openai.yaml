@@ -1,0 +1,7 @@
+interface:
+  display_name: "Short Drama Workflow"
+  short_description: "以角色场景多图参考并行生成紧凑反转的 Seedance 短剧"
+  default_prompt: "使用 $short-drama-workflow 先生成角色和场景设定参考图，再并行生成四段15秒的紧凑短剧并拼接。"
+
+policy:
+  allow_implicit_invocation: true

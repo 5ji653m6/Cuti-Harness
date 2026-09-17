@@ -1,0 +1,4 @@
+interface:
+  display_name: "Subtitle authoring"
+  short_description: "Plan transcription, caption layout, burn-in, and quality checks"
+  default_prompt: "Use $subtitle-authoring to create and burn readable captions into the selected video."

@@ -1,0 +1,6 @@
+interface:
+  display_name: "产品功能演示镜头脚本"
+  short_description: "把产品卖点转化为触发、响应和可见结果的功能演示镜头脚本"
+  default_prompt: "使用 $product-feature-demo-script 为产品设计可见的功能演示镜头。"
+policy:
+  allow_implicit_invocation: true

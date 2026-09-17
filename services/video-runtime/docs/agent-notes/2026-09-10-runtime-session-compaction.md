@@ -1,0 +1,7 @@
+# Runtime Session compaction
+
+Video Runtime exposes `POST /api/video/projects/{project_id}/sessions/{session_id}/compact` for maintenance of an existing project-bound Session. It checks project ownership and the existing Session binding before invoking the Harness `/compact` command. It does not create a binding, run a second planner or rewrite ProjectVersion, Artifact or Build records. The Harness command lifecycle is the audit record for summaries and command failures. A busy Session or unavailable/failed compaction returns an explicit conflict rather than interrupting the Agent.
+
+Checkpoint recovery recognizes canonical `CONTEXT_WINDOW_EXCEEDED` turn failures. Under the project control lock it invokes Harness compaction before returning the checkpoint to the existing durable delivery queue. Both summary success and failure consume that queue's existing bounded attempt budget; an unavailable summarizer cannot create an unlimited retry cycle. Ordinary task errors continue through the existing PlanPatch recovery mechanism.
+
+HTTP transport tests cover native command payloads and failed command results. Runtime API tests cover project binding isolation. Coordinator tests cover overflow recovery order, normal-error behavior and failed summarization. Automatic compaction remains enabled by the Video Agent bundle; this Runtime entry is a maintenance and recovery mechanism, not an executable media DAG step.

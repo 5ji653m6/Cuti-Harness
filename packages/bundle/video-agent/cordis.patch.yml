@@ -1,0 +1,52 @@
+# Cuti Video Agent bundle. Apply over a normal DeepSeek Harness profile.
+- id: compaction-basic
+  disabled: false
+
+- id: command-compact
+  disabled: false
+
+- id: tool-result-pruner
+  disabled: false
+
+- id: llm-pi-ai
+  config:
+    providers:
+      openai:
+        apiKeyEnv: OPENAI_API_KEY
+        api: openai-responses
+        reasoning: !!js process.env.VIDEO_AGENT_REASONING ?? 'low'
+        transport: sse
+        timeoutMs: 300000
+        streamIdleTimeoutMs: 300000
+        models:
+          - id: gpt-5.6-terra
+            name: GPT-5.6 Terra
+            contextWindow: 262144
+            maxTokens: 8192
+            reasoningEfforts:
+              off:
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+
+- id: agent-default-model
+  config:
+    provider: openai
+    model: !!js process.env.VIDEO_AGENT_MODEL ?? 'gpt-5.6-terra'
+
+- insert:
+    - id: cuti-video-runtime
+      name: '@cuti-ai/video-runtime-http'
+      config:
+        baseUrl: !!js process.env.VIDEO_RUNTIME_URL ?? 'http://127.0.0.1:8001'
+        serviceToken: !!js process.env.VIDEO_RUNTIME_SERVICE_TOKEN
+        # Local bundle identity. Keep this separate from production/Cuti user
+        # variables so a stale shell value cannot make Agent tools own a
+        # different user than the local Video Studio BFF.
+        userId: !!js process.env.VIDEO_RUNTIME_TOOL_USER_ID ?? process.env.VIDEO_RUNTIME_USER_ID ?? process.env.VIDEO_RUNTIME_LOCAL_USER_ID ?? 'local-user'
+        timeoutMs: !!js Number(process.env.VIDEO_RUNTIME_TIMEOUT_MS ?? 30000)
+
+    - id: cuti-tool-video
+      name: '@cuti-ai/tool-video'

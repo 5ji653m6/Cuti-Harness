@@ -1,0 +1,25 @@
+{
+  "name": "@cuti-ai/video-agent-harness",
+  "description": "Local environment setup and launcher for Cuti Video Harness",
+  "version": "0.1.1-rc.2",
+  "publishConfig": { "access": "public" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testcoder-ui/video-agent-harness.git",
+    "directory": "apps/video-cli"
+  },
+  "type": "module",
+  "bin": { "video-agent-harness": "bin/video-agent-harness.mjs" },
+  "files": ["bin", "src", "runtime", "README.md"],
+  "scripts": {
+    "start": "node bin/video-agent-harness.mjs web --source-root ../..",
+    "test": "node --test tests/*.test.mjs",
+    "prepack": "node scripts/prepare-assets.mjs"
+  },
+  "dependencies": {
+    "@cuti-ai/video-agent-bundle": "workspace:^",
+    "@deepseek-ai/dsh": "workspace:^",
+    "tar": "7.5.22"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+id: cuti.continuity-validator
+version: 1.0.0
+api_version: v1
+runtime_entrypoint: app.video_runtime.builtin_plugins.continuity_validator:ContinuityValidatorPlugin
+trusted: true
+dependencies:
+  - cuti.media-core
+contributions:
+  validators:
+    - cuti.continuity.validate
+permissions:
+  network_domains: []
+  credentials:
+    - OPENAI_API_KEY
+  sandbox: false
+  max_cost_usd: 50

@@ -1,0 +1,4 @@
+interface:
+  display_name: "中文输出"
+  short_description: "控制整次任务的用户可见内容、旁白和画面文字使用中文"
+  default_prompt: "使用 $language-zh 让本次任务全程输出中文。"

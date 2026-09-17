@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cuti 产品宣传片工作流"
+  short_description: "生成360度产品设定图并贯穿视频阶段的产品广告工作流"
+  default_prompt: "使用 $cuti-product-workflow 根据产品图片和简报制作一支商业产品宣传片。"

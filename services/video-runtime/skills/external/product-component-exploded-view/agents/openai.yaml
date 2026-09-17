@@ -1,0 +1,6 @@
+interface:
+  display_name: "产品零件细节拆解"
+  short_description: "为精密产品设计有序拆解、悬浮展示与精准回装的商业特效"
+  default_prompt: "使用 $product-component-exploded-view 为适合的精密产品设计拆解悬浮与重新装配镜头。"
+policy:
+  allow_implicit_invocation: true

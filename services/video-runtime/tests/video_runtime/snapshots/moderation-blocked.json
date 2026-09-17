@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "progress_message": "Content moderation: user revision required",
+  "category": "content_moderation",
+  "automatic_repairs_remaining": 0,
+  "requires_user_action": true,
+  "trigger_source": "unknown"
+}

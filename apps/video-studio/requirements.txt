@@ -1,0 +1,3 @@
+# This frontend has no Python dependencies.
+# Install its pinned Node.js dependencies with: npm ci
+# The actual dependency manifests are package.json and package-lock.json.

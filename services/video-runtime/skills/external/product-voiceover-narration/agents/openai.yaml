@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品原生旁白设计"
+  short_description: "基于统一视觉脚本设计跨片段声音一致的原生产品旁白能力"
+  default_prompt: "使用 $product-voiceover-narration 为已完成的产品视觉脚本填充与画面同步、跨片段声音一致的原生旁白。"

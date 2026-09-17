@@ -1,0 +1,15 @@
+id: cuti.style-presets
+version: 1.0.0
+api_version: v1
+runtime_entrypoint: app.video_runtime.builtin_plugins.style_presets:StylePresetPlugin
+trusted: true
+contributions:
+  styles:
+    - cuti.cinematic
+    - cuti.anime
+    - cuti.documentary
+permissions:
+  network_domains: []
+  credentials: []
+  sandbox: false
+  max_cost_usd: 0

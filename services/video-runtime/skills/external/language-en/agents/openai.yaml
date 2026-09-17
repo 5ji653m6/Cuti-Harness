@@ -1,0 +1,4 @@
+interface:
+  display_name: "English Output"
+  short_description: "Keep the full agent run and generated speech in English"
+  default_prompt: "Use $language-en to keep this run in English."

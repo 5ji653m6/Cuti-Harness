@@ -1,0 +1,104 @@
+CLAUDE.local.md
+.env
+.env.*
+!.env.example
+*.pem
+cookies.txt
+node_modules/
+# Compiled package output only. Do not ignore apps/*/src/lib.
+/lib/
+packages/**/lib/
+vendor/**/lib/
+apps/*/lib/
+*.tsbuildinfo
+pnpm-debug.log
+.pnpm-store/
+.cache/
+examples/*/*.jsonl
+.storages/
+.sessions/
+examples/*/.sessions/
+coverage/
+.doc-typecheck-*/
+.node-next-types-*/
+.oxlint-contract-*/
+.oxlintrc.contract-*.json
+oxlint-contract-*.ts
+.humanize/
+tmp/
+.tmp/
+.claude/commands/
+.claude/launch.json
+.claude/settings.json
+.vscode/
+.DS_Store
+.idea
+mise.toml
+dist-exe/
+python/sdk-runtime/src/deepseek_harness_runtime/runtime/dsh-jsonrpc-agent-*
+python/sdk-runtime/src/deepseek_harness_runtime/runtime/node/
+python/**/__pycache__/
+python/**/.pytest_cache/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/*.py[cod]
+apps/web/dist/
+website/.vitepress/.temp/
+.artifacts/
+.dsh-build/
+.playwright-mcp/
+.orig
+# External Skills are repository inputs and must remain reproducible for collaborators.
+# Runtime-installed credentials, caches, and generated artifacts stay covered by the
+# general environment, data, cache, and build-output rules below.
+
+services/video-runtime/ee/
+.worktrees/
+worktrees/
+.agents/worktrees/
+# Upstream DeepSeek Agent Notes are development-history records, not product
+# runtime inputs. Keep the lightweight authoring instructions, but do not copy
+# the large active/archive corpus back into the product branch.
+.agents/notes/implemented/
+.agents/notes/archived/
+.agents/notes/proposed/
+.agents/notes/rejected/
+.typert-*/
+.runtime-deps/
+*.egg-info/
+
+# Local runtime artifacts (Cuti video services). Never source.
+logs/
+*.log
+data/
+.local-media/
+.local-state/
+.video-agent-harness-data/
+tmp-*.png
+deploy/.env.__probe__
+deploy/harness-test/
+services/video-runtime/.mv*_plan.json
+apps/video-cli/runtime/video-runtime/
+apps/video-cli/runtime/media-service/
+apps/video-cli/runtime/sandbox-worker/
+apps/video-cli/runtime/studio/
+apps/video-cli/*.tgz
+
+# Workspace lock is the root pnpm-lock.yaml. Nested locks appear from local package installs.
+packages/**/pnpm-lock.yaml
+vendor/**/pnpm-lock.yaml
+# Root tool entrypoints are generated from config/root during pnpm install.
+/.oxlintrc.json
+/.oxlintrc.staged.json
+/.jscpd.json
+/knip.json
+/lefthook.yml
+/pytest.ini
+/tsconfig.json
+/tsconfig.base.json
+/tsconfig.base.client.json
+/tsconfig.host.json
+/tsconfig.client.json
+/tsdown.config.ts
+/vitest.config.ts

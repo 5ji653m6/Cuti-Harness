@@ -1,0 +1,5 @@
+# Dockerfile.runtime installs [project].dependencies from pyproject.toml.
+# Do not maintain a second pip list here; it will drift from pyproject.toml.
+# Local standalone:
+#   python -m pip install -e .
+#   python -m uvicorn app.video_runtime.standalone:app --host 127.0.0.1 --port 8001

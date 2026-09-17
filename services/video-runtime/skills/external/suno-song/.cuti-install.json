@@ -1,0 +1,6 @@
+{
+  "installed_at": "2026-08-13T09:00:00+00:00",
+  "name": "suno-song",
+  "source": "local_authored",
+  "notes": "Instruction-only. Verbatim Bitwize CC0 song/Suno skills. Native suno.generate. Does not replace atomic.music.generate."
+}

@@ -1,0 +1,15 @@
+fastapi>=0.115.0,<0.116.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+boto3>=1.35.0
+aiofiles>=24.1.0
+httpx>=0.27.0
+# WaveSpeed CloudFront downloads: s3_service._download_http uses requests
+# (httpx can stall on those URLs). Must be declared; it is not a transitive dep.
+requests>=2.32.0,<3
+python-multipart>=0.0.12
+Pillow>=11.0.0
+prometheus-fastapi-instrumentator>=7.0.0,<8.0.0
+structlog>=24.4.0
+numpy>=2.0.0

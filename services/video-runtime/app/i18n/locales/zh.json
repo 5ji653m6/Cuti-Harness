@@ -1,0 +1,94 @@
+{
+  "music": {
+    "generated": "背景音乐已生成完成，可以试听后决定是否继续，也可以裁切到合适的片段后再进入分镜",
+    "trim_applied": "已按你的选择应用裁切，保留了约 {duration} 秒的音乐，后续分镜和镜头将基于新版本生成"
+  },
+  "video": {
+    "completed": "视频拼接完成",
+    "missing_segments_prompt": "部分片段缺失或失败，已用黑屏占位；请重新生成失败片段后重试"
+  },
+  "outline": {
+    "generated": "故事梗概生成成功"
+  },
+  "video_segments": {
+    "processing_start": "开始歌词同步...",
+    "processing_completed": "歌词同步完成，共 {count} 段已就绪",
+    "processing_failed": "歌词同步失败: {error}",
+    "segment_created": "歌词同步第 {number} 段创建成功",
+    "segment_failed": "歌词同步第 {number} 段创建失败: {error}"
+  },
+  "lipsync": {
+    "processing_start": "开始处理 {count} 个视频片段的唇形同步",
+    "processing_completed": "唇形同步处理完成，成功处理 {count} 个片段",
+    "processing_failed": "唇形同步处理失败: {error}",
+    "segment_start": "处理视频片段唇形同步: {uuid}",
+    "segment_completed": "视频片段唇形同步完成: {uuid}",
+    "segment_failed": "视频片段唇形同步失败 {uuid}: {error}",
+    "video_check_start": "检查视频是否适合配音: {url}",
+    "video_suitable": "视频适合配音，继续进行唇形同步: {uuid}",
+    "video_unsuitable": "视频不适合配音，跳过唇形同步: {uuid}",
+    "video_check_failed": "视频理解检查失败，继续进行唇形同步: {uuid}",
+    "no_audio_url": "没有找到音频URL，跳过唇形同步: {uuid}"
+  },
+  "character": {
+    "generation_failed": "角色图像生成失败",
+    "multi_view_generation_failed": "多视角图生成失败"
+  },
+  "common": {
+    "success": "成功",
+    "failed": "失败",
+    "error": "错误",
+    "generating": "生成中",
+    "completed": "完成"
+  },
+  "image_model_switched": {
+    "fallback_default": "指定的模型因使用量暂时无法调用，已自动重试别的模型完成生成。",
+    "best_effort_consistency": "角色一致性可能存在差异，已选用最接近的结果。",
+    "all_unavailable": "所有图像生成模型暂时不可用，请稍后重试。"
+  },
+  "video_model_switched": {
+    "fallback_suffix": " (已自动使用备用模型)",
+    "all_unavailable": "所有视频生成模型暂时不可用，请稍后重试。"
+  },
+  "generation_failed": {
+    "reason": {
+      "rate_limited": "当前生成需求较多，请稍后重试。",
+      "content_moderation": "内容未通过安全审核，请调整描述后重试。",
+      "quota_exceeded": "生成额度暂时不足，请稍后重试。",
+      "service_unavailable": "生成服务暂时繁忙，请稍后重试。",
+      "invalid_input": "当前内容暂不被支持，请调整描述后重试。",
+      "unknown": "生成失败，请稍后重试。"
+    },
+    "stage_blocked": {
+      "music": "音乐生成失败。后续镜头依赖音乐节奏，本次生成已终止，建议开启新对话重新生成。",
+      "outline": "脚本/大纲生成失败。后续生成都依赖它，本次生成已终止，建议开启新对话重新生成。",
+      "character": "角色生成失败。后续关键帧与视频依赖角色形象，本次生成已终止，建议开启新对话重新生成。",
+      "character_fusion": "角色融合失败。本次生成已终止，建议开启新对话重新生成。",
+      "scene": "分镜场景生成失败。本次生成已终止，建议开启新对话重新生成。",
+      "narration": "旁白生成失败。本次生成已终止，建议开启新对话重新生成。",
+      "keyframe": "有 {failed}/{total} 个关键帧生成失败。后续视频依赖关键帧，已暂停，请重试失败的关键帧后再继续。",
+      "video": "有 {failed}/{total} 个镜头视频生成失败。已暂停，请重试失败的镜头后再继续。"
+    },
+    "item_failed": "第 {index} 项：{reason}",
+    "summary": "{stage}：{failed}/{total} 失败。"
+  },
+  "capability_warnings": {
+    "sora": "Sora 支持 480p、720p（API 为 720p，480p 由下采样得到）、16:9、9:16。",
+    "kling": "Kling v3 支持 480p、720p。",
+    "nano_banana": "Nano Banana 支持 480p、720p。",
+    "seedance_2_fast_i2v": "Seedance 2.0 Fast 支持 480p、720p（不支持 1080p）。"
+  },
+  "completion": {
+    "video_analysis": "视频分析",
+    "story_outline_generated": "故事梗概生成",
+    "characters_designed": "角色设计",
+    "scenes_generated": "场景生成",
+    "storyboard_detail_generated": "详细分镜生成",
+    "keyframes_generated": "关键帧生成",
+    "video_segments_generated": "视频片段生成",
+    "narrations_generated": "旁白生成",
+    "music_generated": "音乐生成",
+    "video_completed": "视频拼接"
+  }
+}
+
