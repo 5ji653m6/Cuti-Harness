@@ -81,14 +81,14 @@ This is the release acceptance path for the open-source branch. The setup comman
 ### 1. Clone the open-source branch
 
 ```sh
-git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch https://github.com/testcoder-ui/cuti-video-agent.git
+git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch https://github.com/VideoVerses/Cuti-Harness.git
 cd cuti-video-agent
 ```
 
 The HTTPS command works anonymously after the repository visibility is set to **Public**. Before public release, an invited collaborator with a configured GitHub SSH key can use:
 
 ```sh
-git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch git@github.com:testcoder-ui/cuti-video-agent.git
+git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch git@github.com:VideoVerses/Cuti-Harness.git
 cd cuti-video-agent
 ```
 
@@ -266,4 +266,4 @@ This project is licensed under the [MIT License](LICENSE). DeepSeek and imported
 
 ## ⭐️ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=testcoder-ui/cuti-video-agent&type=Date)](https://star-history.com/#testcoder-ui/cuti-video-agent&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=VideoVerses/Cuti-Harness&type=Date)](https://star-history.com/#VideoVerses/Cuti-Harness&Date)

@@ -81,14 +81,14 @@ Video Studio 的两条真实导出路径：对话式迭代构建视频世界，�
 ### 1. 克隆开源分支
 
 ```sh
-git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch https://github.com/testcoder-ui/cuti-video-agent.git
+git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch https://github.com/VideoVerses/Cuti-Harness.git
 cd cuti-video-agent
 ```
 
 仓库可见性设为 **Public** 后，任何人都能匿名执行上述 HTTPS 命令。正式公开前，已获邀请且配置了 GitHub SSH Key 的协作者可以使用：
 
 ```sh
-git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch git@github.com:testcoder-ui/cuti-video-agent.git
+git clone --depth 1 --filter=blob:none --branch deepseek-harness-open --single-branch git@github.com:VideoVerses/Cuti-Harness.git
 cd cuti-video-agent
 ```
 
@@ -266,4 +266,4 @@ python -m unittest discover -s services/video-runtime/tests/video_runtime -v
 
 ## ⭐️ Star 历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=testcoder-ui/cuti-video-agent&type=Date)](https://star-history.com/#testcoder-ui/cuti-video-agent&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=VideoVerses/Cuti-Harness&type=Date)](https://star-history.com/#VideoVerses/Cuti-Harness&Date)
